@@ -10,13 +10,13 @@ class CommentsController < ApplicationController
       @comment.item = @item
       auth_openid
       if current_object.is_spam?(request)
-        render :text => "Oh dear, I've been told this is SPAM. Sorry if this ain't true"
+        render :text => "Oh dear, I've been told this is SPAM. Sorry if this ain't true" and return
       end
     end
     
     response_for :create do
       flash[:notice] = "Thank you for your comment"
-      redirect_to url_for_item(@item)
+      redirect_to url_for_item(@item) and return
     end
   end
   

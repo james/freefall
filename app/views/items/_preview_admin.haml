@@ -1,4 +1,4 @@
-- if User.current_user && User.current_user.admin?
+- if User.is_admin?
   %p.admin
     - if item.published?
       = link_to 'hide', hide_tweet_path(item)

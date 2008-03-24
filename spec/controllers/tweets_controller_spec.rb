@@ -1,9 +1,12 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe TweetsController do
+describe "Tweets Controller when not admin" do
+  controller_name "tweets"
+  before(:all) do
+    
+  end
 
-  #Delete this example and add some real ones
-  it "should use TweetsController" do
+  it "should not allow access to admin unless admin" do
     controller.should be_an_instance_of(TweetsController)
   end
 

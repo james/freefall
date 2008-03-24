@@ -1,3 +1,2 @@
 class TweetsController < ItemController
-
 end

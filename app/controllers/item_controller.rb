@@ -1,4 +1,8 @@
 class ItemController < ApplicationController
+  before_filter :check_admin
+  make_resourceful do 
+    build :all
+  end
   def hide
     check_admin
     item = Item.find(params[:id])
