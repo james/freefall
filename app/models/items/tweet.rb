@@ -11,6 +11,10 @@ class Tweet < Item
     true
   end
   
+  def short_text
+    self.text
+  end
+  
   def external_url
     'http://twitter.com/abscond/statuses/' + external_id
   end

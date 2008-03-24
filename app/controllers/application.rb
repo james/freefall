@@ -8,7 +8,14 @@ class ApplicationController < ActionController::Base
   
   session :session_key => '_freefall_session_id'
   
+  before_filter :dev_mode
   before_filter :set_current_user
+  
+  def dev_mode
+    if RAILS_ENV == "development"
+      session[:openid_url] = 'http://abscond.org'
+    end
+  end
   
   def set_current_user
     User.current_user = User.find_or_make(session[:openid_url])
@@ -32,21 +39,25 @@ class ApplicationController < ActionController::Base
   end
   
   def access_denied
-    render :text => 'Access Denied for ' + current_openid_url
+    render :text => 'Access Denied for ' + session[:openid_url]
   end
   
   def rescue_404
     render :text => 'FAIL'
   end
   
-  def url_for_item(item)
+  def url_for_item(item, action='')
     case item.class.to_s
     when "Tweet"
-      return item.external_url
+      url = tweet_url(item)
     when "Article"
-      return article_url(item)
+      url = article_url(item)
     else
-      return "http://abscond.org/"
+      url = "http://abscond.org"
     end
+    unless action.blank?
+      url += ";#{action}"
+    end
+    url
   end
 end

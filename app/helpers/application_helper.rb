@@ -1,14 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def url_for_item(item)
-    case item.class.to_s
-    when "Tweet"
-      return item.external_url
-    when "Article"
-      return article_url(item)
-    else
-      return "http://abscond.org/"
-    end
+  def url_for_item(item, action='')
+    controller.url_for_item(item, action)
   end
   
   def url_for_item_comments(item)
