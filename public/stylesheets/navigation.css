@@ -1,0 +1,27 @@
+#navigation{
+  text-align:center;
+}
+
+#navigation .nav_section{
+  display:inline;
+}
+
+#navigation h2 {
+  display: inline;
+  font-variant: small-caps;
+  font-style: normal;
+  margin:0.2em 0.5em;
+}
+
+body.javascripted #navigation h2 {
+  cursor: pointer;
+}
+
+#navigation h2.active {
+  text-decoration: underline;
+}
+
+#current_navigation_content{
+  padding:0 26.3%;
+  margin:1em 0;
+}

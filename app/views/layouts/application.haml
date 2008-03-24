@@ -1,0 +1,46 @@
+!!!
+%html
+  %head{:xmlns=>"http://www.w3.org/1999/xhtml", 'xml:lang'=>"en", :lang=>"en"}
+    %meta{'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    %title=@title.blank? ? 'James Darling : Abscond.org' : @title
+    = stylesheet_link_tag 'structural', 'itemlist', 'globals', 'navigation', 'contents'
+    = javascript_include_tag 'prototype', 'lowpro'
+    
+    %link{:href => "/items.atom", :rel => "alternate", :type => "application/atom+xml"}
+    
+    %link{:rel => "openid.server", :href => "http://www.myopenid.com/server"}
+    %link{:rel => "openid.delegate", :href => "http://abscond.myopenid.com/"}
+    
+  %body
+    #header
+      #header-inner
+        #open_id_status
+          -if User.current_user
+            = User.current_user.openid_url
+            = render :partial => 'sessions/logout'
+          -else
+            = render :partial => 'sessions/login'
+        %p since 2003
+        %h1#abscond= link_to 'Abscond', '/'
+        %p James Darling
+    
+    #navigation
+      .nav_section
+        %h2 About
+        .nav_section_content
+          =link_to 'Abscond.org', '/'
+          is the personal site of James Darling
+      .nav_section
+        %h2 Search
+        .nav_section_content
+          %form{:action => '/', :method => :get}
+            %input{:type => :text, :name => :search, :value => params[:search]}
+            %input{:type => :submit, :value => :search}
+    
+    - if flash[:notice]
+      #flash
+        %p= flash[:notice]
+    
+    = yield
+
+    = javascript_include_tag 'application'

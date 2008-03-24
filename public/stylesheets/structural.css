@@ -1,0 +1,98 @@
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	font-size:16px;
+	font-weight:normal;
+}
+
+body{
+	background-color:#CEC4BB;
+	color:#210;
+	font-family:'optima','verdana','bitstream vera sans',sans-serif;
+	font-size:16px;
+	line-height:1.5;
+	background: #CEC4BB url('/bg.png') no-repeat bottom right;
+}
+
+h1, h2, h3{
+}
+
+h1{
+	text-transform: uppercase;
+}
+
+h1#abscond a{
+	font-size:2em;
+	text-transform: none;
+}
+
+h2{
+	font-style: italic;
+}
+
+a{
+	color:#210;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+#header{
+	background-color: #F2ABD7;
+	text-align:center;
+	border-bottom: 1px solid #221105;
+}
+
+#header-inner *{
+	display:inline;
+}
+
+#open_id_status{
+  position:absolute;
+  right:0;
+  top:0;
+  font-size:0.8em;
+}
+
+#open_id_status h4{
+  font-size:0.8em;
+  font-weight:normal;
+  padding:0.2em;
+}
+
+#open_id_status h4:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#open_id_status input{
+  font-size:0.8em;
+	background-color: transparent;
+  font-family:'optima','verdana','bitstream vera sans',sans-serif;
+}
+
+input.button_link{
+	cursor: pointer;
+	background-color: transparent;
+  font-family:'optima','verdana','bitstream vera sans',sans-serif;
+}
+
+#orientation #searchbar{
+	text-align:center;
+}
+
+#orientation form input{
+	background-color: #CEC4BB;
+	color:#050505;
+	height:1em;
+	text-align:center;
+}
+
+.container{
+	min-width:40em;
+	max-width:65em;
+	padding:0 9.5%;
+}

@@ -1,0 +1,11 @@
+.container
+  .content
+    = render :partial => '/comments/comment', :locals => {:comment => @comment}
+    -form_for :comment, @comment, :url => url_for_item_comments(@item), :html => {:method => :post} do |f|
+      - @comment.attributes.each do |attribute|
+        = f.hidden_field attribute[0], :value => attribute[1]
+      .submit.publish
+        =submit_tag 'Publish'
+        
+    %h3 Or edit again
+    = render :partial => '/comments/new', :locals => {:item => @item}

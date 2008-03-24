@@ -1,0 +1,12 @@
+#searchbar
+  %form
+    =check_box_tag 'articles'
+    =check_box_tag 'articles'
+    =check_box_tag 'articles'
+    =text_field_tag 'articles'
+    =check_box_tag 'articles'
+    =check_box_tag 'articles'
+    =check_box_tag 'articles'
+%ul.tags
+  -Snippet.tag_counts.each do |tag|
+    %li=link_to tag.name, {}, {:style => "font-size:#{tag.count}em"}

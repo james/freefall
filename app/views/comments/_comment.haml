@@ -1,0 +1,15 @@
+.comment.clearfix
+  .comment_meta.vcard
+    -if comment.url?
+      = link_to (comment.name, comment.url, :class => 'url fn') if comment.url?
+    - else
+      %span.fn= comment.name
+    .photo_and_date.clearfix
+      -if comment.email?
+        %img.photo{:src => "http://www.gravatar.com/avatar.php?gravatar_id=#{Digest::MD5.hexdigest(comment.email)} &amp;size=80&amp;default=http%3A%2F%2Fwww.abscond.org%2Fimages%2Ficon40.png"}
+      -if comment.created_at?
+        .created_at
+          %p= comment.created_at.strftime("%A %e %B %Y")
+          %p= comment.created_at.strftime("%I:%M %p")
+  .comment_content
+    = markdown(comment.content.gsub(/</,"&lt;").gsub(/>/,"&gt;"))

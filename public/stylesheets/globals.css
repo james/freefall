@@ -1,0 +1,88 @@
+pre{
+  overflow:scroll;
+}
+
+h3{
+  margin:1em 0;
+  margin-left:38.2%;
+  font-style: italic;
+  clear:both;
+}
+
+p{
+  margin:0 0 1em;
+}
+
+ul.tags li{
+  display:inline;
+  list-style: none;
+  padding:2px 3px;
+}
+
+.text_set{
+  clear:both;
+}
+
+.text_set label,
+.radio_set .radio_group_name{
+  display:block;
+  float:left;
+  width:35.6%;
+  margin:0;
+  margin-right:3%;
+  text-align:right;
+}
+
+.text_set input,
+.text_set textarea{
+  width:61.4%;
+}
+.text_set textarea{
+  margin-top:0.1em;
+}
+
+form .submit{
+  float:right;
+  margin:0.3em 0;
+}
+
+form .submit.publish{
+  float:none;
+  margin-left:37.1%;
+}
+
+form .submit input{
+  padding:0.3em 0.4em 0.3em 0.3em;
+  border: 1px solid #221100;
+}
+
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+#flag {
+  border: 1px solid #221100;
+  margin:0pt 25.2%;
+  padding: 0 1%;
+}
+
+#flag p{
+  margin: 0.5em 0;
+}

@@ -1,0 +1,7 @@
+.meta
+  %h2= link_to item.title, article_path(item)
+  %p= pluralize(item.comments.count, "Comment")
+  %p= item.created_at.to_s(:short)
+.content
+  = markdown item.short_text
+  = render :partial => 'items/preview_admin', :locals => {:item => item}

@@ -1,0 +1,39 @@
+.radio_set
+  .radio_group_name Auth Type
+  =f.radio_button 'auth', 'direct', :class => 'auth_type', :checked => 'checked'
+  %label{:for => 'comment_auth_direct'} Normal
+  =f.radio_button 'auth', 'openid', :class => 'auth_type'
+  %label{:for => 'comment_auth_openid'} Super Duper OpenID
+
+.openid_explanation
+  %h4 OpenID?
+  %p Use OpenID on this site to be able to edit and delete your comments in the future, along with other fun things I haven't though of yet.
+  %p OpenID is a decentralised authentication system. In fun words, it's a funky way of using one account across all OpenID supporting website. Livejournal and AOL accounts are actually also OpenID accounts.
+
+#comment_auth_openid_form.auth_form
+  .text_set
+    %label OpenID URL
+    %span{:id => "openidstatus"}
+    - if session[:openid] 
+      %span{:class => "text", :id => "openidloggedin"}
+        =session[:openid].gsub('http://', '')
+        = link_to '(logout)', {:controller => 'open_ids', :action => 'logout'}, :id => 'openid_logout'
+    -else
+      =f.text_field 'openid_url', :class => 'text'
+    
+#comment_auth_direct_form.auth_form
+  .text_set
+    %label Name
+    =f.text_field 'name', :class => 'text'
+
+  .text_set
+    %label Email
+    =f.text_field 'email', :class => 'text'
+  
+  .text_set
+    %label URL
+    =f.text_field 'url', :value => 'http://', :class => 'text'
+
+.text_set
+  %label Message
+  =f.text_area 'content', :rows => 10

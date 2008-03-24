@@ -1,0 +1,5 @@
+.comments
+  %h3 Comments
+  =render :partial => '/comments/comment', :collection => item.comments
+  %h3 Add your own comment
+  =render :partial => '/comments/new', :locals => {:item => item}

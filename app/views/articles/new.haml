@@ -1,0 +1,6 @@
+=render :partial => '/common/admin/header', :locals => {:item => @article}
+
+-form_for :article, @article, :url => articles_path do |f|
+  =f.text_field :title
+  =f.text_area :text
+  =submit_tag

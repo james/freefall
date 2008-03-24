@@ -1,0 +1,5 @@
+.full_item.container
+  =render :partial => '/items/header', :locals => {:item => @article}
+  .content
+    = markdown @article.text
+    =render :partial => '/items/comments', :locals => {:item => @article}

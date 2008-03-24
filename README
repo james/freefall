@@ -1,0 +1,28 @@
+FreeFall
+========
+
+A personal CMS
+
+The focus of Freefall is to refocus online lives back into single websites
+
+This code is not currently Open Source, and while you clearly have access to the source code, just for now, you can't use it. This will change very soon.
+
+Features
+========
+
+Inbuilt Tumblog and full Blog
+Support for various APIs direct into your site:
+  * Twitter
+  * Flickr
+  * Ma.gnolia
+  * Last.fm hearted
+  * More to come
+OpenID authentication for Administration and User comments
+RESTful
+
+Dependencies
+============
+
+Gems
+----
+haml

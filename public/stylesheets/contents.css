@@ -1,0 +1,106 @@
+.full_snippet{
+	padding:1em 8.8%;
+}
+
+.header{
+	float:left;
+	padding-bottom:1em;
+	width:100%;
+	margin-top:1em;
+}
+
+.sidenotes{
+	float:right;
+	width:18%;
+	text-align:left;
+	margin-top:6px;
+}
+
+.sidenotes p, .content * sub, .openid_explanation p{
+	margin:0 0;
+	font-size:10px;
+	line-height:16px;
+}
+
+.sidenotes h4, .openid_explanation h4{
+	margin:0 0;
+	font-size:10px;
+	line-height:16px;
+	font-weight:bold;
+}
+
+.content * sub.sided{
+	right:0;
+	margin-top:-1.9em;
+	position:absolute;
+	display:block;
+	width:15.7%;
+	margin-right:8.8%;
+	text-align:left;
+}
+
+.content sup{
+	font-size:0.6em;
+}
+
+.content{
+	text-align: justify;
+	margin-right:20.3%;
+}
+
+.content a{
+  text-decoration:underline;
+}
+
+.admin, .admin *{
+  font-size:0.8em;
+}
+
+.comment{
+  margin:1em 0;
+}
+
+.comment .comment_meta{
+  float:left;
+  width:35.6%;
+  margin:0pt 1.7% 0pt 0pt;
+  text-align:right;
+}
+
+.comment .comment_meta p{
+  margin:0;
+}
+
+.comment .comment_content{
+  margin-left:38.5%;
+  text-align:left;
+}
+
+.comment .created_at, .comment .created_at *{
+  font-size:10px;
+  line-height:16px;
+}
+
+.comment .comment_meta .photo_and_date{
+  margin-top:0.4em;
+}
+
+.comment .created_at{
+  float:right;
+}
+
+.comment .comment_meta img.photo{
+  width:10%;
+  float:right;
+  margin:3px;
+  margin-right:0;
+}
+
+.openid_explanation{
+  right:9%;
+	margin-top:-1em;
+	position:absolute;
+	display:block;
+	width:15%;
+	text-align:left;
+}

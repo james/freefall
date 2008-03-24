@@ -1,0 +1,11 @@
+- unless params[:search].blank?
+  #flag
+    %p
+      This is a search for
+      = params[:search]
+
+%ul.items
+
+  - for item in @items
+    %li.clearfix
+      = render :partial => item.type.to_s.pluralize.downcase + '/preview', :locals => {:item => item}

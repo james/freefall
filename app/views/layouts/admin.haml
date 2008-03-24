@@ -1,0 +1,12 @@
+!!!
+%html
+  %head{:xmlns=>"http://www.w3.org/1999/xhtml", 'xml:lang'=>"en", :lang=>"en"}
+    %meta{'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    %title=@title.blank? ? 'Abscond.org Admin' : @title
+    = stylesheet_link_tag 'structural', 'itemlist', 'globals', 'sass', 'contents', 'admin'
+    = javascript_include_tag 'prototype', 'lowpro', 'application', 'admin'
+  %body
+    #header
+      =link_to 'Items', admin_path
+    
+    = yield

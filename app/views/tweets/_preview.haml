@@ -1,0 +1,6 @@
+.meta
+  %h2= link_to "Tweet", 'http://twitter.com/abscond/statuses/' + item.external_id
+  %p= item.created_at.to_s(:short)
+.content
+  = markdown item.text
+  = render :partial => 'items/preview_admin', :locals => {:item => item}

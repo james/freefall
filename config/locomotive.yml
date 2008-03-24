@@ -1,0 +1,6 @@
+---
+mode: development
+runs_at_launch: 0
+identifier: Freefall
+port: 30009
+bundle: /Applications/Locomotive2/Bundles/rmagickRailsMar2007_i386.locobundle

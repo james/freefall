@@ -1,0 +1,5 @@
+#header_login
+  %h4 Login
+  -form_for :session, @session, :url => sessions_path do |f|
+    =text_field_tag 'openid_url', 'http://'
+    =submit_tag 'Login'
