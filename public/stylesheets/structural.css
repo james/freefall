@@ -12,7 +12,7 @@ body{
 	font-family:'optima','verdana','bitstream vera sans',sans-serif;
 	font-size:16px;
 	line-height:1.5;
-	background: #CEC4BB url('/bg.png') no-repeat bottom right;
+	background: #CEC4BB url('/images/bg.png') no-repeat bottom right;
 }
 
 h1, h2, h3{
