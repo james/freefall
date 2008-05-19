@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :articles, :member => {:show => :any, :hide => :any} do |article|
     article.resources :comments, :collection => {:preview => :any}
   end
-  map.resources :tweets, :member => {:show => :any, :hide => :any}
+  map.resources :tweets, :member => {:unhide => :any, :hide => :any}
   
   map.open_id_complete 'sessions', :controller => "sessions", :action => "create", :requirements => { :method => :get }
   map.resources :sessions

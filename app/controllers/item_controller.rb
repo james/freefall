@@ -13,7 +13,7 @@ class ItemController < ApplicationController
     item.save!
     redirect_to '/'
   end
-  def show
+  def unhide
     check_admin
     item = Item.find(params[:id])
     item.published = true

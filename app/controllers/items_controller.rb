@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   make_resourceful do 
-    build :index, :show
+    build :show
   end
   def index
     if params[:search].blank?

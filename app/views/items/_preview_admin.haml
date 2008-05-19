@@ -3,5 +3,5 @@
     - if item.published?
       = link_to 'hide', hide_tweet_path(item)
     - else
-      = link_to 'show', show_tweet_path(item)
+      = link_to 'show', unhide_tweet_path(item)
     = link_to 'edit', url_for_item(item, 'edit')
