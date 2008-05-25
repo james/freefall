@@ -9,11 +9,12 @@ ActionController::Routing::Routes.draw do |map|
   map.admin '/admin', :controller => 'items', :action => 'admin'
   map.resources :items
   
-  map.resources :articles, :member => {:show => :any, :hide => :any} do |article|
-    article.resources :comments, :collection => {:preview => :any}
+  [:articles, :tweets].each do |item|
+    map.resources item, :member => {:unhide => :any, :hide => :any} do |article|
+      article.resources :comments, :collection => {:preview => :post}
+    end
   end
-  map.resources :tweets, :member => {:unhide => :any, :hide => :any}
-  
+    
   map.open_id_complete 'sessions', :controller => "sessions", :action => "create", :requirements => { :method => :get }
   map.resources :sessions
 end

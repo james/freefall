@@ -11,6 +11,6 @@ class ItemsController < ApplicationController
   end
   
   def error
-    wert
+    render :text => preview_article_comments_path(1)
   end
 end

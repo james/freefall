@@ -8,4 +8,4 @@
 
   - for item in @items
     %li.clearfix
-      = render :partial => item.type.to_s.pluralize.downcase + '/preview', :locals => {:item => item}
+      = render :partial => item.class.to_s.pluralize.downcase + '/preview', :locals => {:item => item}
