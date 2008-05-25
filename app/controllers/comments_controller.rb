@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     
     response_for :create do
       flash[:notice] = "Thank you for your comment"
-      redirect_to url_for_item(@item) and return
+      redirect_to url_for_item(@item)
     end
   end
   

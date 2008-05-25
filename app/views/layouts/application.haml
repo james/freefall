@@ -28,22 +28,41 @@
       .nav_section
         %h2 About
         .nav_section_content
-          =link_to 'Abscond.org', '/'
-          is the personal site of James Darling
+          .item_image
+            = image_tag 'james_darling.jpg'
+          .item_content
+            %p
+              =link_to 'Abscond.org', '/'
+              is the personal site of me, James Darling, a
+              = ((Date.today - Date.new(y=1988,m=2,d=26))/365).to_i
+              year old living in London.
+            %p
+              By day, I do the geeky stuff to make
+              = link_to "People's Music Store", 'http://peoplesmusicstore.com'
+              work marvellously. Other times I
+              = link_to 'geek', "http://github.com/james/"
+              = link_to 'rave,', "http://bangface.com"
+              = link_to 'drive,', "http://flickr.com/photos/abscond/sets/72157603862728267/"
+              = link_to 'listen,', "http://www.last.fm/user/Abscond/"
+              = link_to 'party', "http://lastordersontheunderground.com/"
+              and other things. These short into things are really hard. Hello.
+            
       .nav_section
-        %h2 Elswhere
+        %h2 Elsewhere
         .nav_section_content
-          =link_to 'Twitter', 'http://twitter.com/abscond'
-          \:
-          =link_to 'Flickr', 'http://flickr.com/photos/abscond'
-          \:
-          =link_to 'Last Orders', 'http://lastordersontheunderground.com/'
+          .item_content
+            =link_to 'Twitter', 'http://twitter.com/abscond'
+            \:
+            =link_to 'Flickr', 'http://flickr.com/photos/abscond'
+            \:
+            =link_to 'Last Orders', 'http://lastordersontheunderground.com/'
       .nav_section
         %h2 Search
         .nav_section_content
-          %form{:action => '/', :method => :get}
-            %input{:type => :text, :name => :search, :value => params[:search]}
-            %input{:type => :submit, :value => :search}
+          .item_content
+            %form{:action => '/', :method => :get}
+              %input{:type => :text, :name => :search, :value => params[:search]}
+              %input{:type => :submit, :value => :search}
     
     - if flash[:notice]
       #flash

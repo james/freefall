@@ -22,6 +22,19 @@ body.javascripted #navigation h2 {
 }
 
 #current_navigation_content{
-  padding:0 26.3%;
+  padding:0 26.3% 0 9.5%;
   margin:1em 0;
+}
+
+#current_navigation_content .item_image{
+  width:22.6%;
+  float:left;
+}
+
+#current_navigation_content .item_image img{
+  width:100%;
+}
+
+#current_navigation_content .item_content{
+  margin-left:26%;
 }
