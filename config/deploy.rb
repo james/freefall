@@ -14,7 +14,12 @@ set :deploy_to, "/var/www/#{application}"
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 # set :scm, :subversion
-set :scm_user, 'abscond'
+set :scm_user, 'james'
+default_run_options[:pty] = true
+set :repository,  "git@github.com:james/freefall.git"
+set :scm, "git"
+set :scm_passphrase, "popsicle"
+#set :user, "deployer"
 
 role :app, "65.99.217.185"
 role :web, "65.99.217.185"
