@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   
-  before_filter :check_for_admin, :only => [:index, :edit, :update, :delete]
-  before_filter :find_item
+  before_filter :check_admin, :only => [:index, :edit, :update, :destroy]
+  before_filter :find_item, :except     => [:index, :edit, :update, :destroy]
   
   make_resourceful do 
     build :all
@@ -18,6 +18,10 @@ class CommentsController < ApplicationController
       flash[:notice] = "Thank you for your comment"
       redirect_to url_for_item(@item)
     end
+    
+    response_for :destroy do
+      redirect_to comments_path
+    end
   end
   
   def preview
@@ -33,10 +37,6 @@ class CommentsController < ApplicationController
   
   def find_item
     @item = Item.find(params[:article_id])
-  end
-  
-  def check_for_admin
-    User.is_admin?
   end
   
   def auth_openid

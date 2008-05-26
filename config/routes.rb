@@ -14,7 +14,8 @@ ActionController::Routing::Routes.draw do |map|
       article.resources :comments, :collection => {:preview => :post}
     end
   end
-    
+  
+  map.resources :comments
   map.open_id_complete 'sessions', :controller => "sessions", :action => "create", :requirements => { :method => :get }
   map.resources :sessions
 end
