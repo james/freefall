@@ -24,6 +24,10 @@ class CommentsController < ApplicationController
     end
   end
   
+  def index
+    @comments = Comment.find(:all, :limit => 50, :order => "created_at DESC")
+  end
+  
   def preview
     auth_openid
     @comment = Comment.new(params[:comment])
