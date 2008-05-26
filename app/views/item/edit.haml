@@ -1,5 +1,5 @@
 %h1 Edit
-- form_for @current_object.type, @current_object, :url => url_for_item(@current_object), :html => {:method => :put, } do |f|
+- form_for @current_object, :url => url_for_item(@current_object), :html => {:method => :put} do |f|
   = f.text_field :title
   = f.text_area :text
   = submit_tag

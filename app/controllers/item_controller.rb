@@ -3,7 +3,7 @@ class ItemController < ApplicationController
   make_resourceful do 
     build :all
     response_for :edit do
-      render 'item/edit'
+      render :template => 'item/edit'
     end
   end
   def hide
