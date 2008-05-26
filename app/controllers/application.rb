@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   
   session :session_key => '_freefall_session_id'
   
-  before_filter :dev_mode
+  #before_filter :dev_mode
   before_filter :set_current_user
   
   def dev_mode
