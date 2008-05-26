@@ -1,0 +1,9 @@
+%table
+  - @comments.each do |comment|
+    %tr
+      %td=h comment.content
+      %td=h comment.name
+      %td= link_to comment.item.title, item_url(comment.item)
+      %td
+        - form_tag comment_path(comment), :method => :delete do
+          = submit_tag :delete
