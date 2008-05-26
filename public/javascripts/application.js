@@ -52,7 +52,7 @@ var Navigation = Behavior.create({
     this.element.select('.nav_section_content').each(function(section){
       section.hide();
     })
-    this.element.insert({after: "<div id='current_navigation_content'></div>"})
+    this.element.insert({after: "<div id='current_navigation_content' class='clearfix'></div>"})
   }
 })
 
