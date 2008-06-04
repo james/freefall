@@ -90,4 +90,5 @@ form .submit input{
 blockquote{
   border-left: 1px solid #221100;
   padding-left:1em;
+  clear:left;
 }
