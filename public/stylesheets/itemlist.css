@@ -24,6 +24,10 @@ ul.items .meta p{
 	margin:0;
 }
 
+ul.items .meta p a{
+  font-size: 1em;
+}
+
 ul.items .content{
 	margin-left:20.5%;
 }
