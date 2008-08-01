@@ -69,6 +69,12 @@
             %form{:action => '/', :method => :get}
               %input{:type => :text, :name => :search, :value => params[:search]}
               %input{:type => :submit, :value => :search}
+      .nav_section
+        %h2 Tunes
+        .nav_section_content
+          .item_content
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="301" height="595"><param name="allowScriptAccess" value="always" /><param name="movie" value="http://peoplesmusicstore.com/swf/MicroStore.swf?storexml=http%3A%2F%2Fpeoplesmusicstore.com%2Fabscondrecords%2Fmicro_store.xml" />	<embed src="http://peoplesmusicstore.com/swf/MicroStore.swf?storexml=http%3A%2F%2Fpeoplesmusicstore.com%2Fabscondrecords%2Fmicro_store.xml" width="301" height="595" type="application/x-shockwave-flash" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>
+            
     
     - if flash[:notice]
       #flash
