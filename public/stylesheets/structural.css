@@ -34,10 +34,12 @@ h2{
 a{
 	color:#210;
 	text-decoration:none;
+	border-bottom:1px dotted #999999;
 }
 
 a:hover{
-	text-decoration:underline;
+	text-decoration:none;
+	border-bottom:1px solid #221105;
 }
 
 #header{
